@@ -52,7 +52,7 @@ Vue.component ('lista-de-tareas',{
 			<li v-for="(tarea, indice) of tareas" class="list-group-item" v-bind:class="{terminada: tarea.terminada}">
 				{{tarea.texto}}
 				<span class="pull-right">
-					<button type="button" class="btn btn-success btn-xs glyphicon glyphicon-ok" @click="tarea.terminada=true"></button>
+					<button type="button" class="btn btn-success btn-xs glyphicon glyphicon-ok" @click="tarea.terminada= !tarea.terminada"></button>
 					<button type="button" class="btn btn-danger btn-xs glyphicon glyphicon-remove" @click="borrar(indice)"></button>
 				</span>
 			</li>
